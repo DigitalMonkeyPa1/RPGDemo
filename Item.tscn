@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://Item.gd" type="Script" id=1]
+[ext_resource path="res://Cash.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 23.2218, 42.8012 )
+
+[node name="Item" type="Area2D" groups=[
+"Item",
+]]
+
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 0.831613, 0.555356, -0.555356, 0.831613, -1.68364, -0.141262 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( -1.68364, -0.141262 )
+transform/rot = -33.7352
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+

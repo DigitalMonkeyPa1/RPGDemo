@@ -1,0 +1,181 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://DialogueBox.gd" type="Script" id=1]
+
+[node name="DialogueBox" type="Panel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 640.0
+margin/bottom = 320.0
+script/script = ExtResource( 1 )
+player = null
+
+[node name="PlayerTexture" type="TextureFrame" parent="."]
+
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 48.0
+margin/bottom = 48.0
+stretch_mode = 0
+
+[node name="CharacterTexture" type="TextureFrame" parent="."]
+
+anchor/left = 1
+anchor/right = 1
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 96.0
+margin/top = 0.0
+margin/right = 48.0
+margin/bottom = 48.0
+stretch_mode = 0
+
+[node name="StatementLabel" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 135.0
+margin/top = 16.0
+margin/right = 548.0
+margin/bottom = 64.0
+text = "Statement is shown here."
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ThenButton" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 1
+margin/left = 429.0
+margin/top = 64.0
+margin/right = 479.0
+margin/bottom = 84.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Then"
+flat = false
+
+[node name="OptionButtons" type="Control" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+
+[node name="0" type="Button" parent="OptionButtons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 120.0
+margin/top = 120.0
+margin/right = 540.0
+margin/bottom = 140.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "This is Option 0"
+flat = false
+
+[node name="1" type="Button" parent="OptionButtons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 120.0
+margin/top = 150.0
+margin/right = 540.0
+margin/bottom = 170.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "This is Option 1"
+flat = false
+
+[node name="2" type="Button" parent="OptionButtons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 120.0
+margin/top = 180.0
+margin/right = 540.0
+margin/bottom = 200.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "This is Option 2"
+flat = false
+
+[node name="3" type="Button" parent="OptionButtons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 120.0
+margin/top = 210.0
+margin/right = 540.0
+margin/bottom = 230.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "This is Option 3"
+flat = false
+
+[node name="4" type="Button" parent="OptionButtons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 120.0
+margin/top = 240.0
+margin/right = 540.0
+margin/bottom = 260.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "This is Option 4"
+flat = false
+
+[connection signal="pressed" from="ThenButton" to="." method="_on_ThenButton_pressed"]
+
+[connection signal="pressed" from="OptionButtons/0" to="." method="_on_option_button_pressed" binds= [ 0 ]]
+
+[connection signal="pressed" from="OptionButtons/1" to="." method="_on_option_button_pressed" binds= [ 1 ]]
+
+[connection signal="pressed" from="OptionButtons/2" to="." method="_on_option_button_pressed" binds= [ 2 ]]
+
+[connection signal="pressed" from="OptionButtons/3" to="." method="_on_option_button_pressed" binds= [ 3 ]]
+
+[connection signal="pressed" from="OptionButtons/4" to="." method="_on_option_button_pressed" binds= [ 4 ]]
+
+
